@@ -2,5 +2,10 @@
 
 public class Row
 {
-    public List<string> Values { get; set; }
+    public Row(List<string> values)
+    {
+        Values = values;
+    }
+    
+    public List<string> Values { get; } 
 }

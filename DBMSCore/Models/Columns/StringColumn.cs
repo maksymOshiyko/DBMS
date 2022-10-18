@@ -1,8 +1,8 @@
-﻿namespace DBMSCore.Models.ColumnTypes;
+﻿namespace DBMSCore.Models.Columns;
 
 public class StringColumn : Column
 {
-    public StringColumn(string name) : base(name) { }
+    public StringColumn(string name) : base(name, "STRING") { }
 
     public override bool Validate(string value)
     {

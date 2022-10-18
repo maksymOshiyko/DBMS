@@ -7,7 +7,20 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.4.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\DBMSCore\DBMSCore.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Services" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+    </PropertyGroup>
 </Project>

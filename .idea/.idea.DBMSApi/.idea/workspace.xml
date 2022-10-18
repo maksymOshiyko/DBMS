@@ -6,15 +6,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="396ab876-dc98-4ead-8146-e3bc29d83861" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBMSApi.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBMSApi/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBMSApi/DBMSApi.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBMSApi/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBMSApi/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBMSApi/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBMSApi/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBMSApi/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/PngColumn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DBMSApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DBMSApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSApi/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSApi/DBMSApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSApi/DBMSApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/DBMSCore.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/DBMSCore.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Interfaces/IDBMS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Interfaces/IDbms.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/Column.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Column.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/CharColumn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/CharColumn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/IntegerColumn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/IntegerColumn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/PictureColumn.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/RealColumn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/RealColumn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/RealIntervalColumn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/RealIntervalColumn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/StringColumn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/StringColumn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/Database.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Database.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/Row.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Row.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/Table.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Table.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Services/DBMS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Services/Dbms.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +31,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/41a1ada3ef534798a78d16a9ae7ae2b722680/0b/498cc90e/EndpointMetadataApiExplorerServiceCollectionExtens.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c2a72f7fe70b4723a5d0dda57d0b15831cba88/2c/d121e4a7/ApiControllerAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c2a72f7fe70b4723a5d0dda57d0b15831cba88/34/46e92d5e/BadRequestObjectResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/123735509fa19d358d3971345e1872b6d26687d1b343ad7ca37af43930694c/Guid.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de7177e8a31c1e501222daf218f2e9532ff54cdb767595dc7e94cc73c8e95f1/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74cf1b2bf45e15764bb55b3768fdf15dbba4e1acc5484ca8d0a1e9d1e724/WebApplicationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e7e231682be8652744726acc6de35323daa68061429db55e0c251114902f60/String.Manipulation.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2FGmsN0DIlzw8hqj6sB5Gf5K1gp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -41,7 +59,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -88,7 +106,12 @@
       <workItem from="1664127013604" duration="1980000" />
       <workItem from="1664211391875" duration="10542000" />
       <workItem from="1664390855177" duration="4995000" />
-      <workItem from="1664950604522" duration="1238000" />
+      <workItem from="1664950604522" duration="1833000" />
+      <workItem from="1665834735019" duration="16038000" />
+      <workItem from="1665856408429" duration="3432000" />
+      <workItem from="1665860228092" duration="11872000" />
+      <workItem from="1666022877412" duration="9290000" />
+      <workItem from="1666117990919" duration="7738000" />
     </task>
     <servers />
   </component>
@@ -110,5 +133,28 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DBMSCore/Services/Dbms.cs</url>
+          <line>27</line>
+          <properties documentPath="E:\univ\4 course\IT\DBMSApi\DBMSCore\Services\Dbms.cs" initialLine="27" containingFunctionPresentation="method 'SaveDatabase'">
+            <startOffsets>
+              <option value="647" />
+            </startOffsets>
+            <endOffsets>
+              <option value="669" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

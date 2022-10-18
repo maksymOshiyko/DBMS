@@ -2,13 +2,12 @@
 
 namespace DBMSCore.Interfaces;
 
-public interface IDBMS
+public interface IDbms
 {
     Database CreateDatabase(string name);
     Database GetDatabase();
-    byte[] DownloadDatabase();
     void SaveDatabase(string path);
-    Database UploadDatabase(byte[] file);
+    Database UploadDatabase(string path);
     Table AddTable(string name);
     void DeleteTable(int tableIndex);
     Row AddRow(int tableIndex, List<string> values);
@@ -17,4 +16,5 @@ public interface IDBMS
     Column AddColumn(int tableIndex, string name, string type);
     void DeleteColumn(int tableIndex, int columnIndex);
     Table SortByColumn(int tableIndex, int sortColumnIndex);
+    byte[] DownloadPng(int tableIndex, int columnIndex, int rowIndex);
 }

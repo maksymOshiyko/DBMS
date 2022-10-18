@@ -1,8 +1,8 @@
-﻿namespace DBMSCore.Models.ColumnTypes;
+﻿namespace DBMSCore.Models.Columns;
 
 public class IntegerColumn : Column
 {
-    public IntegerColumn(string name) : base(name) { }
+    public IntegerColumn(string name) : base(name, "INTEGER") { }
 
     public override bool Validate(string value)
     {
