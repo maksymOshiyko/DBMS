@@ -5,7 +5,6 @@ namespace DBMSApi.Controllers;
 
 [ApiController]
 [ApiExceptionFilter]
-[Route("api/[controller]")]
 public class ApiControllerBase : ControllerBase
 {
 }

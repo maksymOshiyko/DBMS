@@ -1,4 +1,6 @@
-﻿namespace DBMSCore.Models;
+﻿using DBMSCore.Dtos;
+
+namespace DBMSCore.Models;
 
 public abstract class Column
 {

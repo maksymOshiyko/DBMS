@@ -131,7 +131,7 @@ public class Table
     {
         var column = Columns.ElementAtOrDefault(columnIndex);
         if (column is null) throw new NotFoundException("Column is not found");
-        if (column.Type != "PNG") throw new NotFoundException("Column type is not PNG");
+        if (column.Type != "PNG") throw new BadRequestException("Column type is not PNG");
         
         if (Rows.ElementAtOrDefault(rowIndex) is null) throw new NotFoundException("Row is not found");
         if (Rows[rowIndex].Values.ElementAtOrDefault(columnIndex) is null)

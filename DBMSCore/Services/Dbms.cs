@@ -1,4 +1,5 @@
-﻿using DBMSCore.Exceptions;
+﻿using DBMSCore.Dtos;
+using DBMSCore.Exceptions;
 using DBMSCore.Interfaces;
 using DBMSCore.Models;
 using Newtonsoft.Json;
@@ -12,7 +13,7 @@ public class Dbms : IDbms
     public Database CreateDatabase(string name)
     {
         if (string.IsNullOrEmpty(name)) throw new BadRequestException("Database should have name");
-        
+
         _database = new Database(name);
         return _database;
     }
@@ -26,7 +27,7 @@ public class Dbms : IDbms
     public void SaveDatabase(string path)
     {
         if (_database is null) throw new BadRequestException("Database is not created");
-        
+
         try
         {
             string json = JsonConvert.SerializeObject(_database, Formatting.Indented, new JsonSerializerSettings
@@ -72,10 +73,17 @@ public class Dbms : IDbms
         }
     }
 
-    public Table AddTable(string name)
+    public TableDto AddTable(string name)
     {
         if (_database is null) throw new BadRequestException("Database is not created");
-        return _database.AddTable(name);
+        var table = _database.AddTable(name);
+        return new TableDto
+        {
+            Index = _database.Tables.IndexOf(table),
+            Name = table.Name,
+            Columns = table.Columns.Select((c, i) => new ColumnDto {Index = i, Name = c.Name, Type = c.Type}).ToList(),
+            Rows = table.Rows.Select((r, i) => new RowDto {Index = i, Values = r.Values}).ToList(),
+        };
     }
 
     public void DeleteTable(int tableIndex)
@@ -84,10 +92,15 @@ public class Dbms : IDbms
         _database.DeleteTable(tableIndex);
     }
 
-    public Row AddRow(int tableIndex, List<string> values)
+    public RowDto AddRow(int tableIndex, List<string> values)
     {
         CheckTableExists(tableIndex);
-        return _database!.Tables[tableIndex].AddRow(values);
+        var row = _database!.Tables[tableIndex].AddRow(values);
+        return new RowDto
+        {
+            Index = _database.Tables[tableIndex].Rows.IndexOf(row),
+            Values = row.Values
+        };
     }
 
     public void DeleteRow(int tableIndex, int rowIndex)
@@ -96,16 +109,27 @@ public class Dbms : IDbms
         _database!.Tables[tableIndex].DeleteRow(rowIndex);
     }
 
-    public Row EditRow(int tableIndex, int rowIndex, List<string> newValues)
+    public RowDto EditRow(int tableIndex, int rowIndex, List<string> newValues)
     {
         CheckTableExists(tableIndex);
-        return _database!.Tables[tableIndex].EditRow(rowIndex, newValues);
+        var row = _database!.Tables[tableIndex].EditRow(rowIndex, newValues);
+        return new RowDto
+        {
+            Index = rowIndex,
+            Values = row.Values
+        };
     }
 
-    public Column AddColumn(int tableIndex, string name, string type)
+    public ColumnDto AddColumn(int tableIndex, string name, string type)
     {
         CheckTableExists(tableIndex);
-        return _database!.Tables[tableIndex].AddColumn(name, type);
+        var column = _database!.Tables[tableIndex].AddColumn(name, type);
+        return new ColumnDto
+        {
+            Index = _database.Tables[tableIndex].Columns.IndexOf(column),
+            Name = column.Name,
+            Type = column.Type
+        };
     }
 
     public void DeleteColumn(int tableIndex, int columnIndex)
@@ -114,10 +138,17 @@ public class Dbms : IDbms
         _database!.Tables[tableIndex].DeleteColumn(columnIndex);
     }
 
-    public Table SortByColumn(int tableIndex, int sortColumnIndex)
+    public TableDto SortByColumn(int tableIndex, int sortColumnIndex)
     {
         CheckTableExists(tableIndex);
-        return _database!.Tables[tableIndex].SortByColumn(sortColumnIndex);
+        var table = _database!.Tables[tableIndex].SortByColumn(sortColumnIndex);
+        return new TableDto
+        {
+            Index = tableIndex,
+            Name = table.Name,
+            Columns = table.Columns.Select((c, i) => new ColumnDto {Index = i, Name = c.Name, Type = c.Type}).ToList(),
+            Rows = table.Rows.Select((r, i) => new RowDto {Index = i, Values = r.Values}).ToList(),
+        };
     }
 
     public byte[] DownloadPng(int tableIndex, int columnIndex, int rowIndex)
@@ -126,10 +157,24 @@ public class Dbms : IDbms
         return _database!.Tables[tableIndex].DownloadPng(columnIndex, rowIndex);
     }
 
+    public TableDto GetTable(int tableIndex)
+    {
+        CheckTableExists(tableIndex);
+        var table = _database!.Tables[tableIndex];
+        return new TableDto
+        {
+            Index = tableIndex,
+            Name = table.Name,
+            Columns = table.Columns.Select((c, i) => new ColumnDto {Index = i, Name = c.Name, Type = c.Type}).ToList(),
+            Rows = table.Rows.Select((r, i) => new RowDto {Index = i, Values = r.Values}).ToList(),
+        };
+    }
+
+
     private void CheckTableExists(int tableIndex)
     {
         if (_database is null) throw new BadRequestException("Database is not created");
-        if (_database.Tables.ElementAtOrDefault(tableIndex) is null) 
+        if (_database.Tables.ElementAtOrDefault(tableIndex) is null)
             throw new NotFoundException("Table is not found");
     }
 }

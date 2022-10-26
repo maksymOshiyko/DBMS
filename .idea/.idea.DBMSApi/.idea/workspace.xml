@@ -6,24 +6,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="396ab876-dc98-4ead-8146-e3bc29d83861" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/PngColumn.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBMSCore/Dtos/TableDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DBMSApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DBMSApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSApi/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSApi/DBMSApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSApi/DBMSApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSApi/Controllers/ApiControllerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSApi/Controllers/ApiControllerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSApi/Controllers/ColumnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSApi/Controllers/ColumnsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSApi/Controllers/DatabaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSApi/Controllers/DatabaseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSApi/Controllers/RowController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSApi/Controllers/RowsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSApi/Controllers/TableController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSApi/Controllers/TablesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBMSApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSCore/DBMSCore.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/DBMSCore.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSCore/Interfaces/IDBMS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Interfaces/IDbms.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSApi/WeatherForecast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Interfaces/IDbms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Interfaces/IDbms.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBMSCore/Models/Column.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Column.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/CharColumn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/CharColumn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/IntegerColumn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/IntegerColumn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/PictureColumn.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/RealColumn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/RealColumn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/RealIntervalColumn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/RealIntervalColumn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/ColumnTypes/StringColumn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Columns/StringColumn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/Database.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Database.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSCore/Models/Row.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Row.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBMSCore/Models/Table.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Models/Table.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBMSCore/Services/DBMS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Services/Dbms.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBMSCore/Services/Dbms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBMSCore/Services/Dbms.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +31,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c2a72f7fe70b4723a5d0dda57d0b15831cba88/34/46e92d5e/BadRequestObjectResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/123735509fa19d358d3971345e1872b6d26687d1b343ad7ca37af43930694c/Guid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/628cf6d53b56e439a45e6821e92db9e20e23645d97c137854212ed226277834/HttpPostAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/92ba99732d4562797bff236838fb1cf4747be24963e26f53c20c7def475db15/ActionResultOfT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c07532ecad6affb99bea9097d852faca34a95966fae4d18186c722a075cfda/ActionResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6354d55b4c1fdbe22621ea48185af62cdeadcf4f28d9ed0890dfdf36c6/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de7177e8a31c1e501222daf218f2e9532ff54cdb767595dc7e94cc73c8e95f1/Int32.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74cf1b2bf45e15764bb55b3768fdf15dbba4e1acc5484ca8d0a1e9d1e724/WebApplicationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e7e231682be8652744726acc6de35323daa68061429db55e0c251114902f60/String.Manipulation.cs" root0="SKIP_HIGHLIGHTING" />
@@ -111,8 +110,20 @@
       <workItem from="1665856408429" duration="3432000" />
       <workItem from="1665860228092" duration="11872000" />
       <workItem from="1666022877412" duration="9290000" />
-      <workItem from="1666117990919" duration="7738000" />
+      <workItem from="1666117990919" duration="8680000" />
+      <workItem from="1666160207126" duration="1242000" />
+      <workItem from="1666635240604" duration="8100000" />
+      <workItem from="1666700497120" duration="4694000" />
+      <workItem from="1666765890702" duration="17000" />
     </task>
+    <task id="LOCAL-00001" summary="core + rest api + open api spec">
+      <created>1666126779190</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666126779190</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,22 +144,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="core + rest api + open api spec" />
+    <option name="LAST_COMMIT_MESSAGE" value="core + rest api + open api spec" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DBMSCore/Services/Dbms.cs</url>
-          <line>27</line>
+          <line>28</line>
           <properties documentPath="E:\univ\4 course\IT\DBMSApi\DBMSCore\Services\Dbms.cs" initialLine="27" containingFunctionPresentation="method 'SaveDatabase'">
             <startOffsets>
-              <option value="647" />
+              <option value="660" />
             </startOffsets>
             <endOffsets>
-              <option value="669" />
+              <option value="682" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DBMSApi/Filters/ApiExceptionFilterAttribute.cs</url>
+          <line>21</line>
+          <properties documentPath="E:\univ\4 course\IT\DBMSApi\DBMSApi\Filters\ApiExceptionFilterAttribute.cs" initialLine="21" containingFunctionPresentation="method 'OnException'">
+            <startOffsets>
+              <option value="707" />
+            </startOffsets>
+            <endOffsets>
+              <option value="732" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
