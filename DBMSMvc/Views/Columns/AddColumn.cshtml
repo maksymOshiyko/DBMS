@@ -1,0 +1,27 @@
+﻿@model DBMSCore.Dtos.TableDto
+
+@{
+    ViewBag.Title = "Add column";
+    Layout = "_Layout";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <h3>Add column to "@Model.Name" table</h3>
+        <form asp-controller="Columns" asp-action="AddColumn" method="post">
+            <input id="tableIndex" name="tableIndex" hidden="hidden"/>
+            <div class="mb-3">
+                <label class="form-label" for="name">Name:</label>
+                <input id="name" class="form-control" name="name"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="type">Type:</label>
+                <input id="type" class="form-control" name="type"/>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <span>Column type(CHAR, INTEGER, PNG, REAL, REAL_INTERVAL, STRING)</span>
+                <button type="submit" class="btn btn-primary float-end">Add</button>
+            </div>
+        </form>
+    </div>
+</div>

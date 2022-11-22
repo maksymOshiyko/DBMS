@@ -170,6 +170,11 @@ public class Dbms : IDbms
         };
     }
 
+    public bool IsDatabaseCreated()
+    {
+        return _database is not null;
+    }
+
 
     private void CheckTableExists(int tableIndex)
     {

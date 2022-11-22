@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Add table";
+    Layout = "_Layout";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <h3>Add table</h3>
+        <form asp-controller="Tables" asp-action="AddTable" method="post">
+            <div class="mb-3">
+                <label class="form-label" for="name">Name:</label>
+                <input id="name" class="form-control" name="name" />
+            </div>
+            <button type="submit" class="btn btn-primary float-end">Add</button>
+        </form>
+    </div>
+</div>

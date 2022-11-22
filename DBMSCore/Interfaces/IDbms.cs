@@ -19,4 +19,5 @@ public interface IDbms
     TableDto SortByColumn(int tableIndex, int sortColumnIndex);
     byte[] DownloadPng(int tableIndex, int columnIndex, int rowIndex);
     TableDto GetTable(int tableIndex);
+    bool IsDatabaseCreated();
 }

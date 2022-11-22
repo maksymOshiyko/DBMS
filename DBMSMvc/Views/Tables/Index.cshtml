@@ -1,0 +1,26 @@
+﻿@model DBMSCore.Dtos.TableDto
+
+@{
+    ViewBag.Title = "Table";
+    Layout = "_Layout";
+}
+
+<div class="d-flex justify-content-between align-items-center">
+    <h2>Table "@Model.Name"</h2>
+    <div class="d-flex gap-3">
+        <a class="btn-primary btn" asp-controller="Columns" asp-action="AddColumn">Add column</a>
+        @if (@Model.Columns.Count > 0)
+        {
+            <a class="btn btn-primary" asp-controller="Rows" asp-action="AddRow">Add row</a>
+        }
+    </div>
+</div>
+
+<div id="table-react-page"></div>
+
+@section Scripts
+{
+    <script src="~/js/react-app/dbms-ui/build/static/js/main.js"></script>
+}
+
+

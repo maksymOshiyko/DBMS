@@ -123,7 +123,7 @@ public class Table
         return new Table(Name)
         {
             Columns = Columns,
-            Rows = Rows.OrderBy(x => x.Values[columnIndex]).ToList()
+            Rows = Rows.OrderBy(x => x.Values.ElementAtOrDefault(columnIndex)).ToList()
         };
     }
 
